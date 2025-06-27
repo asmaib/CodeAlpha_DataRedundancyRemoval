@@ -1,19 +1,13 @@
+import os
+from pymongo import MongoClient
 from flask import Flask, request, render_template
-import pymongo
-from urllib.parse import quote_plus
 
 app = Flask(__name__)
 
-# MongoDB connection
-username = quote_plus("asmaibb")
-password = quote_plus("000")
-cluster = "codealphaprojecttask1.yxz6gkx.mongodb.net"
-authSource = "admin"
-authMechanism = "SCRAM-SHA-1"
 
-uri = f"mongodb+srv://{username}:{password}@{cluster}/?retryWrites=true&w=majority&appName=CodeAlphaProjectTask1&authSource={authSource}&authMechanism={authMechanism}"
+MONGO_URI = os.environ.get("MONGODB_URI")
+client = MongoClient(MONGO_URI)
 
-client = pymongo.MongoClient(uri)
 db = client["redundancy_db"]
 collection = db["data_entries"]
 
@@ -40,7 +34,6 @@ def index():
 
     return render_template("index.html", message=message, color_class=color_class, show_message=show_message)
 
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
