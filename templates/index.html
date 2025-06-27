@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Redundancy Removal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Redundancy Checker</h1>
+    <p class="subtext">Enter a value to check if it’s already stored or not.</p>
+    
+    <h2>Submit Data</h2>
+    <form method="POST">
+      <input type="text" name="data" placeholder="Enter data here..." required />
+      <button type="submit" class="submit-btn {{ color_class }}"><span>Submit</span></button>
+    </form>
+
+    {% if show_message %}
+      <p class="message {{ color_class }}">{{ message }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>

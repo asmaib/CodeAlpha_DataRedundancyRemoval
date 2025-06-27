@@ -1,0 +1,127 @@
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 3rem 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+  }
+  
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtext {
+    color: #555;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  
+  /* ANIMATION FOR SUCCESS (green sweep left-to-right) */
+  .submit-btn.success::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #22c55e;
+    z-index: 0;
+    animation: sweepGreen 0.6s forwards;
+  }
+  
+  .submit-btn.warning::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #eab308;
+    z-index: 0;
+    animation: sweepYellow 0.6s forwards;
+  }
+  
+  .submit-btn.error::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #ef4444;
+    z-index: 0;
+    animation: sweepRed 0.6s forwards;
+  }
+  
+  /* Sweep animations */
+  @keyframes sweepGreen {
+    to { width: 100%; }
+  }
+  @keyframes sweepYellow {
+    to { width: 100%; }
+  }
+  @keyframes sweepRed {
+    to { width: 100%; }
+  }
+  
+  /* To make text stay above the background animation */
+  .submit-btn span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .message {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .message.success {
+    color: #22c55e;
+  }
+  
+  .message.warning {
+    color: #eab308;
+  }
+  
+  .message.error {
+    color: #ef4444;
+  }
+  
