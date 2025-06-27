@@ -33,15 +33,27 @@ Built as part of the **CodeAlpha Internship Task 1**.
 
 ## 📁 Project Structure
 
+```
 CodeAlpha_DataRedundancyRemoval/
-├── app.py # Flask application
-├── requirements.txt # Python dependencies
-├── render.yaml # Render deployment settings
-├── templates/
-│ └── index.html # HTML template
-├── static/
-│ └── style.css # Custom CSS
-
+│
+├── app.py                # Main Flask application
+├── requirements.txt      # Project dependencies
+├── render.yaml           # Configuration for deployment on Render
+│
+├── templates/            # HTML templates
+│   └── index.html        # Main interface of the app
+│
+├── static/               # Static files (CSS)
+│   └── style.css         # Custom styles for the frontend
+│
+├── assets/               # Screenshots used in README
+│   ├── Screenshot 1.png  # Initial view
+│   ├── Screenshot 2.png  # Success state
+│   ├── Screenshot 3.png  # Duplicate data warning
+│   └── Screenshot 4.png  # No data error
+│
+└── README.md             # Project documentation and instructions
+```
 ---
 
 ## ✅ How It Works
@@ -57,23 +69,27 @@ CodeAlpha_DataRedundancyRemoval/
 - Initial View  
 The user is greeted with a minimal UI to enter data.
 
-![Initial View](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot 1.png)
+![Initial View](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot%201.png)
+
 
 
 - Data Added Successfully  
 When a new unique value is entered.
 
-![Success](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot 2.png)
+![Success](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot%202.png)
+
 
 - Data Already Exists  
 If the entered value is already present in the database.
 
-![Warning](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot 3.png)
+![Warning](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot%203.png)
+
 
 - No Data Provided  
 When the input field is left empty or only contains spaces.
 
-![Error](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot 4.png)
+![Error](https://raw.githubusercontent.com/asmaib/CodeAlpha_DataRedundancyRemoval/main/assets/Screenshot%204.png)
+
 
 ---
 
